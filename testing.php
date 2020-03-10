@@ -21,7 +21,7 @@
         
     }
     td#t01{
-        text-align:right;
+        text-align:left;
     }
 </style>
 <body>
@@ -35,22 +35,26 @@
     <table>
         <tr>
             <th>No</th>
-            <th>Nama</th></tr>
+            <th>Nama</th>
+            <th>E-Mail</th></tr>
     <?php
 
       
         while ($fetch = mysqli_fetch_assoc($query)){
             echo '<tr>';
             echo '<td>'.$fetch['no'].'</td>';
-            echo '<td style="background-color:yellow" id="t01">'.$fetch['nama'].'</td></tr>';
+            echo '<td style="background-color:grey">'.$fetch['nama'].'</td>';
+            echo '<td id="t01">'.$fetch['email'].'</td></tr>';
         }
            
     ?>
     </table>
     <form action="showing.php" method="post">
         
-    Name: <input type="text" name="nam"><br>
-    <input type="submit">
+    Name : <input type="text" name="nam">
+    <br>
+    
+    <input type="submit" value="CHECKING DATA">
     </form>       
 
 
