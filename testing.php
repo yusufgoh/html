@@ -38,24 +38,23 @@
             <th>Nama</th>
             <th>E-Mail</th></tr>
     <?php
-
-      
         while ($fetch = mysqli_fetch_assoc($query)){
             echo '<tr>';
             echo '<td>'.$fetch['no'].'</td>';
             echo '<td style="background-color:grey">'.$fetch['nama'].'</td>';
             echo '<td id="t01">'.$fetch['email'].'</td></tr>';
         }
-           
     ?>
     </table>
     <form action="showing.php" method="post">
-        
-    Name : <input type="text" name="nam">
-    <br>
-    
+        Name : <input type="text" name="nam">
+            <br>
     <input type="submit" value="CHECKING DATA">
-    </form>       
+    </form>
+    
+    <form action="update.php">
+    <input type="submit" value="UPDATE DATA">
+    </form>          
 
 
 </body>
